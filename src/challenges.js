@@ -8,8 +8,9 @@ function compareTrue(param1, param2) {
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  let areaTrian = (base * height) / 2.
+  return areaTrian;
 }
 
 // Desafio 3
@@ -67,4 +68,4 @@ module.exports = {
   highestCount,
   splitSentence,
   techList,
-};
+}
