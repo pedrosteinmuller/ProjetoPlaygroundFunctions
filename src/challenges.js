@@ -18,15 +18,15 @@ function splitSentence(nome) {
   let separador = nome.split(" ");
   return separador;
 }
-
-console.log(splitSentence('Ana Laura'));
+// console.log(splitSentence('Ana Laura'));
 
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
-}
-
+function concatName(nomes) {
+      nomes = nomes[nomes.length-1] + ", " + nomes[0];
+      return nomes;
+    }
+  
 // Desafio 5
 function footballPoints() {
   // seu código aqui
