@@ -14,9 +14,13 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(nome) {
+  let separador = nome.split(" ");
+  return separador;
 }
+
+console.log(splitSentence('Ana Laura'));
+
 
 // Desafio 4
 function concatName() {
