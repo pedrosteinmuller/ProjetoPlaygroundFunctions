@@ -65,8 +65,7 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(entrada) {
   let resultado = [];
-  for (let index = 0; index < entrada.length; index += 1)
-  {
+  for (let index = 0; index < entrada.length; index += 1) {
     if (entrada[index] % 3 === 0 && entrada[index] % 5 === 0) {
       resultado.push('fizzBuzz');
     } else if (entrada[index] % 3 === 0) {
@@ -83,20 +82,38 @@ function fizzBuzz(entrada) {
 // Desafio 9
 function encode(enc) {
   for (let index = 0; index < enc.length; index += 1) {
-    enc = enc.replace('a', 1).replace('e', 2).replace('i', 3).replace('o', 4).replace('u', 5)
+    enc = enc
+      .replace('a', 1)
+      .replace('e', 2)
+      .replace('i', 3)
+      .replace('o', 4)
+      .replace('u', 5);
   }
   return enc;
 }
 
 function decode(enc1) {
   for (let index = 0; index < enc1.length; index += 1) {
-    enc1 = enc1.replace('1', 'a').replace('2', 'e').replace('3', 'i').replace('4', 'o').replace('5', 'u')
-}
-return enc1;
+    enc1 = enc1
+      .replace('1', 'a')
+      .replace('2', 'e')
+      .replace('3', 'i')
+      .replace('4', 'o')
+      .replace('5', 'u');
+  }
+  return enc1;
 }
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(array, nomes) {
+  let arrayNomes = [];
+  array.sort();
+  for (let i of array) {
+    arrayNomes.push({ tech: i, name: nomes });
+  }
+  if (array.length === 0) {
+    return 'Vazio!';
+  }
+  return arrayNomes;
 }
 
 module.exports = {
