@@ -9,32 +9,43 @@ function compareTrue(param1, param2) {
 
 // Desafio 2
 function calcArea(base, height) {
-  let areaTrian = (base * height) / 2.
+  let areaTrian = (base * height) / 2;
   return areaTrian;
 }
 
 // Desafio 3
 function splitSentence(nome) {
-  let separador = nome.split(" ");
+  let separador = nome.split(' ');
   return separador;
 }
 // console.log(splitSentence('Ana Laura'));
 
-
 // Desafio 4
 function concatName(nomes) {
-      nomes = nomes[nomes.length-1] + ", " + nomes[0];
-      return nomes;
-    }
-  
+  nomes = nomes[nomes.length - 1] + ', ' + nomes[0];
+  return nomes;
+}
+
 // Desafio 5
 function footballPoints(wins, ties) {
- return wins * 3 + ties * 1;
+  return wins * 3 + ties * 1;
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(meuArray) {
+  let maiorNumero = -1;
+  let numRep = 0;
+  for (let index = 0; index <= meuArray.length; index += 1) {
+    if (meuArray[index] > maiorNumero) {
+      maiorNumero = meuArray[index];
+    }
+  }
+  for (let index = 0; index < meuArray.length; index += 1) {
+    if (meuArray[index] === maiorNumero) {
+      numRep += 1;
+    }
+  }
+  return numRep;
 }
 
 // Desafio 7
@@ -72,4 +83,4 @@ module.exports = {
   highestCount,
   splitSentence,
   techList,
-}
+};
