@@ -49,9 +49,21 @@ return true;
 
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
-}
+  function hydrate(string) {
+    let string2 = 0;
+    let copos = string.match(/\d+/g).map(Number);
+    for (let index = 0; index < copos.length; index += 1) {
+      string2 += copos[index];
+    }
+    if (string2 === 1) {
+      return string2 + ' copo de água'
+    }
+    if (string2 > 1) {
+      return string2 + ' copos de água'
+    }
+  
+  }
+
 
 module.exports = {
   generatePhoneNumber,
